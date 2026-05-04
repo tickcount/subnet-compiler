@@ -7,6 +7,9 @@ on:
 
 permissions:
   contents: write
+  
+env:
+  SING_BOX_VERSION: "1.12.25" 
 
 jobs:
   build:
@@ -30,34 +33,20 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Resolve sing-box version
-        id: singbox-version
-        run: |
-          version=$(curl -fsSL \
-            -H "Authorization: Bearer ${{ github.token }}" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/SagerNet/sing-box/releases/latest" \
-            | jq -r '.tag_name | ltrimstr("v")')
-          if [ -z "$version" ] || [ "$version" = "null" ]; then
-            echo "Failed to resolve sing-box version" >&2
-            exit 1
-          fi
-          echo "version=$version" >> "$GITHUB_OUTPUT"
-
       - name: Cache sing-box
         id: cache-singbox
         uses: actions/cache@v4
         with:
           path: /usr/local/bin/sing-box
-          key: sing-box-${{ steps.singbox-version.outputs.version }}
+          key: sing-box-${{ env.SING_BOX_VERSION }}
 
       - name: Install sing-box
         if: steps.cache-singbox.outputs.cache-hit != 'true'
         run: |
-          VERSION="${{ steps.singbox-version.outputs.version }}"
+          VERSION="${{ env.SING_BOX_VERSION }}"
           curl -fsSL \
             "https://github.com/SagerNet/sing-box/releases/download/v${VERSION}/sing-box-${VERSION}-linux-amd64.tar.gz" \
-            | tar xz --strip-components=1 -C /usr/local/bin/ \
+            | sudo tar xz --strip-components=1 -C /usr/local/bin/ \
                 "sing-box-${VERSION}-linux-amd64/sing-box"
 
       - name: Compile rule sets
