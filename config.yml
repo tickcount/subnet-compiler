@@ -1,11 +1,13 @@
 categories:
   discord:
     sources:
+      - url: https://iplist.opencck.org/?format=text&data=domains&site=telegram.org&site=discord.com&site=discord.gg&site=discord.media
+      - file: data/discord-domains.txt
       - url: https://iplist.opencck.org/?format=text&data=cidr4&site=discord.com&site=discord.gg&site=discord.media
       - url: https://iplist.opencck.org/?format=text&data=cidr6&site=discord.com&site=discord.gg&site=discord.media
-      - file: data/discord-domains.txt
   telegram:
     sources:
+      - url: https://iplist.opencck.org/?format=text&data=domains&site=telegram.org
       - url: https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Services/telegram.lst
       - url: https://core.telegram.org/resources/cidr.txt
       - url: https://iplist.opencck.org/?format=text&data=cidr4&site=telegram.org
