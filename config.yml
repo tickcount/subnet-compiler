@@ -10,7 +10,7 @@ categories:
       - url: https://core.telegram.org/resources/cidr.txt
       - url: https://iplist.opencck.org/?format=text&data=cidr4&site=telegram.org
       - url: https://iplist.opencck.org/?format=text&data=cidr6&site=telegram.org
-  chatgpt:
+  ai:
     sources:
-      - url: https://iplist.opencck.org/?format=text&data=domains&site=chatgpt.com
-      - url: https://iplist.opencck.org/?format=text&data=cidr4&site=chatgpt.com
+      - url: https://iplist.opencck.org/?format=text&data=domains&site=chatgpt.com&site=aistudio.google.com&site=canva.com&site=claude.ai&site=copilot&site=deepl.com&site=elevenlabs.io&site=grammarly.com&site=grok.com&site=kilo.ai&site=perplexity.ai&site=pollo.ai
+      - url: https://iplist.opencck.org/?format=text&data=cidr4&site=chatgpt.com&site=aistudio.google.com&site=canva.com&site=claude.ai&site=copilot&site=deepl.com&site=elevenlabs.io&site=grammarly.com&site=grok.com&site=kilo.ai&site=perplexity.ai&site=pollo.ai
