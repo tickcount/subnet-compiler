@@ -1,0 +1,6 @@
+categories:
+  discord:
+    sources:
+      - url: https://iplist.opencck.org/?format=text&data=cidr4&site=discord.com&site=discord.gg&site=discord.media
+      - url: https://iplist.opencck.org/?format=text&data=cidr6&site=discord.com&site=discord.gg&site=discord.media
+      - file: data/discord-domains.txt
