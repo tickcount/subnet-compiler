@@ -2,7 +2,7 @@ name: Collect & Compile Rule Sets
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Cache pip
         uses: actions/cache@v4
@@ -71,6 +71,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update rule sets $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "feat: update rule sets $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
