@@ -1,18 +1,30 @@
 categories:
   discord:
     sources:
-      - url: https://iplist.opencck.org/?format=text&data=domains&site=discord.com&site=discord.gg&site=discord.media
-      - file: data/discord-domains.txt
+      # domains
+      - url: https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Services/discord.lst
+        # todo: inf: contains useless domains, investigate/filter & optimize
+      # - url: https://iplist.opencck.org/?format=text&data=domains&site=discord.com&site=discord.gg&site=discord.media
+      # cidr
+      - url: https://github.com/itdoginfo/allow-domains/blob/main/Subnets/IPv4/Discord.lst
       - url: https://iplist.opencck.org/?format=text&data=cidr4&site=discord.com&site=discord.gg&site=discord.media
+      - url: https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Subnets/IPv6/Discord.lst
       - url: https://iplist.opencck.org/?format=text&data=cidr6&site=discord.com&site=discord.gg&site=discord.media
   telegram:
     sources:
-      - url: https://iplist.opencck.org/?format=text&data=domains&site=telegram.org
+      # domains
       - url: https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Services/telegram.lst
+      # todo: inf: contains useless domains, investigate/filter & optimize
+      # - url: https://iplist.opencck.org/?format=text&data=domains&site=telegram.org
+      # cidr
       - url: https://core.telegram.org/resources/cidr.txt
+      - url: https://github.com/itdoginfo/allow-domains/blob/main/Subnets/IPv4/telegram.lst
       - url: https://iplist.opencck.org/?format=text&data=cidr4&site=telegram.org
+      - url: https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Subnets/IPv6/telegram.lst
       - url: https://iplist.opencck.org/?format=text&data=cidr6&site=telegram.org
   ai:
     sources:
+      # domains
       - url: https://iplist.opencck.org/?format=text&data=domains&site=chatgpt.com&site=aistudio.google.com&site=canva.com&site=claude.ai&site=copilot&site=deepl.com&site=elevenlabs.io&site=grammarly.com&site=grok.com&site=kilo.ai&site=perplexity.ai&site=pollo.ai
+      # cidr
       - url: https://iplist.opencck.org/?format=text&data=cidr4&site=chatgpt.com&site=aistudio.google.com&site=canva.com&site=claude.ai&site=copilot&site=deepl.com&site=elevenlabs.io&site=grammarly.com&site=grok.com&site=kilo.ai&site=perplexity.ai&site=pollo.ai
