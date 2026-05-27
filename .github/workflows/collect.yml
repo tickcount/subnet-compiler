@@ -7,9 +7,9 @@ on:
 
 permissions:
   contents: write
-  
+
 env:
-  SING_BOX_VERSION: "1.13.11" 
+  SING_BOX_VERSION: "1.13.12"
 
 jobs:
   build:
